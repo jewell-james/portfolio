@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a [your role].">
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #1c1f24;
+      --muted: #5d6470;
+      --accent: #2a5bd7;
+      --line: #dcdde0;
+      --surface: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14161a;
+        --text: #eceef1;
+        --muted: #9aa1ad;
+        --accent: #7ba0ff;
+        --line: #2a2e35;
+        --surface: #1b1e23;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header.site {
+      border-bottom: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+    header.site .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    header.site strong { font-size: 1.1rem; }
+    nav a { margin-left: 1.25rem; text-decoration: none; color: var(--muted); }
+    nav a:hover { color: var(--text); }
+
+    .hero { padding: 5rem 0 3rem; }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: 0 0 1rem; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 56ch; margin: 0 0 1.5rem; }
+    .button {
+      display: inline-block; padding: .7rem 1.2rem; border-radius: 6px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+
+    section { padding: 3rem 0; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 1.5rem; font-size: 1.6rem; }
+
+    .projects { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .project {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem;
+    }
+    .project h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+    .project p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+    .tags { font-size: .85rem; color: var(--muted); }
+
+    .skills { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+    .skills li { border: 1px solid var(--line); border-radius: 999px; padding: .25rem .8rem; font-size: .9rem; }
+
+    footer { padding: 2rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap">
+      <strong>Your Name</strong>
+      <nav aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="hero">
+        <h1>Hi, I'm Your Name. I build [what you build].</h1>
+        <p>A short sentence about what you do, who you do it for, and what you're looking for next.</p>
+        <a class="button" href="#work">See my work</a>
+      </div>
+
+      <section id="work">
+        <h2>Selected work</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Project one</h3>
+            <p>One or two sentences on the problem, your role, and the result.</p>
+            <p class="tags">HTML, CSS, JavaScript</p>
+            <a href="#">View project</a>
+          </article>
+          <article class="project">
+            <h3>Project two</h3>
+            <p>One or two sentences on the problem, your role, and the result.</p>
+            <p class="tags">Python, Flask</p>
+            <a href="#">View project</a>
+          </article>
+          <article class="project">
+            <h3>Project three</h3>
+            <p>One or two sentences on the problem, your role, and the result.</p>
+            <p class="tags">React, Node</p>
+            <a href="#">View project</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About me</h2>
+        <p>Write a short paragraph about your background, what you care about, and how you like to work.</p>
+        <ul class="skills" aria-label="Skills">
+          <li>Skill one</li>
+          <li>Skill two</li>
+          <li>Skill three</li>
+          <li>Skill four</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Want to work together? Email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+        <p>
+          <a href="https://github.com/your-username">GitHub</a> ·
+          <a href="https://linkedin.com/in/your-username">LinkedIn</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Your Name</div>
+  </footer>
+
+</body>
+</html>
